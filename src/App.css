@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "aoharu";
+  src: url("./fonts/aoharu-marker-mini.otf") format("opentype");
+}
+
+@media (max-width: 480px) {
+  input, textarea, select {
+    font-size: 16px;
+  }
+}

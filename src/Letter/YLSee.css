@@ -1,0 +1,335 @@
+.timelinebackground{
+  min-height: 100vh;
+  background: #f7e9ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 14px 46px;
+}
+
+.timeline{
+  color: #de8186;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "aoharu", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 10px 0 18px;
+}
+
+.timelinelistpanel{
+  width: min(92vw, 250px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items : center;
+}
+
+
+.letterItem{
+  width: 100%;
+  padding: 30px 30px 50px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
+  opacity: 0.8;
+  max-width :280px;
+  margin : 0 auto
+}
+.ppanel{
+    background : #fffdfd;
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 40px;
+    line-height: 1.8;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+}
+.photoWrap{
+  width: 90%;             
+  aspect-ratio: 4 / 3;      
+  margin: 12px auto 0;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.sphoto{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  display: block;
+  opacity : 0.95;
+
+}
+
+
+.Totext{
+  color:#564040;
+  font-weight: bold;
+  font-size: 10px;
+
+}
+
+.fromText{
+
+  color: #564040;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top : 16px;
+  text-align: right;        
+}
+
+
+.letterText{
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-top: 12px;          
+  margin-bottom : 12px;
+  font-size : 10px;
+  color:#564040;
+  font-weight : bold;
+}
+
+.likeBtn{
+  position: absolute;
+  right: 12px;
+  bottom: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+
+  color: #de8186;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.likeBtn:hover{
+  transform: translateY(-1px);
+}
+
+.likeBtn:disabled{
+  cursor: default;
+
+}
+
+.likeBtn.liked{
+  background: rgba(255,255,255,0.92);
+}
+
+
+.sseebackbtn,
+.loadMoreBtn{
+  width: 40%;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 10px;
+  font-weight:bold;
+  font-size: 10px;
+
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+  transition: transform 0.12s ease, opacity 0.12s ease;
+  
+}
+
+.sseebackbtn{
+  background: rgb(255, 252, 252);
+  color: #da8186;
+  border: 2px solid rgba(214, 170, 120, 0.9);
+  font-weight : bold;
+}
+
+.loadMoreBtn{
+  background: rgb(255, 252, 252);
+  color: #da8186;
+  border: 2px solid rgba(214, 170, 120, 0.9);
+  
+}
+
+.sseebackbtn:hover,
+.loadMoreBtn:hover{
+  transform: translateY(-1px);
+}
+
+.loadMoreBtn:disabled{
+  opacity: 0.7;
+  cursor: default;
+}
+
+*{
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.deleteBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  border: none;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  color : #564040;
+  font-size : 8px;
+  font-weight : bold;
+  padding: 6px 8px;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.deleteBtn:active{
+  transform: translateY(1px);
+}
+@media (max-width: 600px){
+
+  .timelinebackground{
+    min-height: 100svh;
+    padding: 22px 12px 40px;
+  }
+
+  .timeline{
+    font-size: 32px;
+    margin: 8px 0 14px;
+  }
+
+  .timelinelistpanel{
+    width: min(94vw, 300px);  
+    gap: 18px;      
+  }
+
+  .letterItem{
+    max-width: none;     
+    padding: 18px 16px 54px;   
+    border-radius: 18px;
+  }
+
+  .ppanel{
+    margin-top: 18px;          
+    padding: 14px;
+    border-radius: 14px;
+    line-height: 1.75;
+  }
+
+  .photoWrap{
+    width: 100%;            
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  .Totext,
+  .fromText,
+  .letterText{
+    font-size: 13px;        
+  }
+
+  .fromText{
+    margin-top: 12px;
+  }
+
+  .likeBtn{
+    right: 10px;
+    bottom: 14px;            
+    padding: 10px 14px;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .deleteBtn{
+    top: 10px;
+    right: 10px;
+    font-size: 12px;        
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  .sseebackbtn,
+  .loadMoreBtn{
+    width: min(92vw, 100px);  
+    padding: 12px 12px;
+    font-size: 12px;
+    border-radius: 18px;
+  }
+
+}
+.toast-overlay{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 22px 14px;
+  pointer-events: none; 
+  
+  z-index: 9999;
+}
+
+.toast-panel{
+  width: min(520px, 92vw);
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(214, 170, 120, 0.55);
+  color: #564040;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.16);
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 600px){
+  .toast-overlay{
+    padding: 18px 12px;
+  }
+  .toast-panel{
+    font-size: 13px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 600px){
+  .Totext{
+    margin-bottom: 8px;
+  }
+  .fromText{
+    margin-top: 14px;
+  }
+  .letterText{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.letterItem{
+  position: relative;
+}
+
+.deleteBtn{
+  z-index: 50;          
+}
+
+.photoWrap{
+  position: relative;
+  z-index: 1;
+}

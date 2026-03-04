@@ -1,0 +1,338 @@
+
+.write-page{
+  min-height: 100vh;
+  background: #f7e9ea;     
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 16px 40px;
+}
+
+
+.write-title{
+color: #de8186;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "aoharu", sans-serif;
+
+}
+
+
+.letter-sheet{
+  width: min(78vw, 300px);
+  aspect-ratio: 3 / 4;         
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 48px;
+  padding: 26px 18px;
+
+  border-radius: 6px;         
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  opacity : 0.7
+}
+
+
+.panel{
+  width: 70%;
+  background: rgba(255,255,255,0.92);
+  border-radius: 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+.panel-photo{
+  height: 160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow: hidden;
+}
+
+.photo-upload{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+}
+
+.photo-upload-text{
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #db8387;
+  color: white;
+  font-size : 12px;
+  font-weight : bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+}
+
+.photo-preview{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.panel-text{
+  padding: 18px 18px 14px;
+  position : relative;                 
+}
+
+.to-text{
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight : bold;
+  color : #564040
+}
+
+.letter-textarea{
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  resize: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.from-text{
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-size: 12px;
+  font-weight : bold;
+  color : #564040
+}
+
+.write-actions{
+  display:flex;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.wsend-btn, .wback-btn,.idxbtn{
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  border: 2px solid rgba(214, 170, 120, 0.9);
+  font-weight: bold;
+  color : #564040;
+  opacity : 0.7;
+}
+
+.letter-textarea{
+    font-weight : bold;
+    color : #564040;
+
+
+}
+
+
+
+.confirm-overlay{
+  position: fixed;
+  inset: 0;       
+  display: flex;
+  justify-content: center;  
+  align-items: center;       
+  background: rgba(0,0,0,0.45);
+  z-index: 9999;
+}
+
+
+.confirm-modal{
+  width: min(500px, 90vw);
+  max-height:80vh;        
+  overflow: auto;         
+  background: rgba(249, 159, 163, 0.75);
+  border-radius: 16px;
+  padding: 44px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.confirm-check{
+    font-weight : bold;
+    color : rgba(255,255,255,0.9)
+}
+.beforesub{
+    font-weight : bold;
+    color : rgba(255,255,255,0.9)
+}
+.memo{
+    font-weight : bold;
+    color : rgba(255,255,255,0.9)
+}
+.chancelbtn, .okbtn{
+  position: static;        
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid rgba(214, 170, 120, 0.9);
+  cursor: pointer;
+  background: rgba(255,255,255,0.9);
+  font-weight: bold;
+  color: #de8186;
+  opacity: 0.9;
+ 
+}
+.confirm-actions{
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;  
+}
+.confirm-overlay{
+  z-index: 9999;
+}
+
+.confirm-modal{
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.confirm-actions,
+.okbtn,
+.chancelbtn{
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto;
+}
+
+.toast-overlay{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+  z-index: 99999;
+}
+
+.toast-panel{
+  background: rgba(249, 159, 163,0.9);
+  color: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: toastFade 0.4s ease;
+}
+
+@keyframes toastFade{
+  from{
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 600px){
+
+  .write-page{
+    min-height: 100svh;
+    padding: 24px 12px 34px;
+  }
+
+  .write-title{
+    font-size: 32px;
+  }
+
+  .letter-sheet{
+    width: min(92vw, 300px);   
+    gap: 22px;            
+    padding: 18px 14px;    
+    border-radius: 10px;
+  }
+
+  .panel{
+    width: 90%;             
+    border-radius: 18px;
+  }
+
+  .panel-photo{
+    height: 150px;         
+  }
+
+  .photo-preview{
+    height: 150px;         
+    border-radius: 14px;
+  }
+
+  .panel-text{
+    padding: 14px 14px 12px;
+  }
+
+  .to-text{
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .letter-textarea{
+    min-height: 140px;
+    font-size: 12px;         
+    line-height: 1.75;
+  }
+
+  .from-text{
+    right: 14px;
+    bottom: 10px;
+    font-size: 12px;
+  }
+
+  .write-actions{
+    width: min(92vw, 360px);
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;          
+    justify-content: center;
+  }
+
+  .wsend-btn, .wback-btn, .idxbtn{
+    width: min(92vw, 100px);       
+    padding: 14px 16px;
+    font-size: 12px;
+    opacity: 0.85;
+  }
+
+  .confirm-modal{
+    width: min(300px, 92vw);
+    padding: 22px 18px;    
+    border-radius: 16px;
+  }
+
+  .confirm-actions{
+    gap: 14px;           
+  }
+
+  .okbtn, .chancelbtn{
+    width: 40%;
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  
+  .toast-panel{
+    width: min(520px, 92vw);
+    padding: 18px 16px;       
+    font-size: 12px;
+    border-radius: 16px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px){
+  .letter-sheet{ aspect-ratio: auto; }
+}
