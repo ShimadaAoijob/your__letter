@@ -17,7 +17,7 @@ function YLBinsen({ goto, onDecide }) {
     { id: "no6", img: b6 },
   ];
 
-  const [selectedId, setSelectedId] = useState(Binsen_list[0].id);
+  const [, setSelectedId] = useState(Binsen_list[0].id);
 
   return (
     <div className="binsen-background">
