@@ -1,5 +1,5 @@
 import "./YLIndex.css";
-import {useState} from "react"
+
 function YLIndex ({gotitle,gowrite,gosee,gosettings}){
     return(
         <div className = "index-background">
