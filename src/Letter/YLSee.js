@@ -28,7 +28,7 @@ function YLSee({ selectedBinsen, goindex, initialTab }) {
   const [posts, setPosts] = useState([]);
   const [myUid, setMyUid] = useState(null);
 
-  const PAGE_SIZE = 50;
+  const PAGE_SIZE = 10;
 
   const [loadingFirst, setLoadingFirst] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
