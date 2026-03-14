@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+Your Letter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+匿名で手紙を書き、誰かに届けることができるWebアプリです。
+SNSのような返信やフォローをなくし、手紙を書く体験そのものを楽しめる空間を目指して開発しました。
+URL
+https://yourletter.vercel.app
 
-## Available Scripts
+アプリ概要
+Your Letter は、短い手紙を匿名で投稿できるWebアプリです。
+一般的なSNSでは
+フォロワー数
+返信
+などの評価指標が存在します。
+このアプリでは
+匿名投稿
+短文（最大140文字）
+写真1枚
+返信機能なし
+フォロー機能なし
+という制約を設けることで、誰かに向けて言葉を書くことに集中できる体験を目指しました。
+さらに他者だけでなく過去の自分や未来の自分にも手紙を気軽に書くことができ、
+自分自身の変化を尊重できる環境と、長い年月が経った後も使うことができるアプリを目指しました。
+主な機能
+匿名ログイン（Firebase Authentication）
+手紙投稿（最大120文字）
+画像投稿（1枚）
+タイムライン表示
+いいね機能（ユーザーごとに1回）
+インプレッション表示（閲覧数）
+自分の投稿削除
+便箋デザイン選択
 
-In the project directory, you can run:
+使用技術
+フロントエンド
+React
+JavaScript
+CSS
+バックエンド / インフラ
+Firebase Authentication
+Firestore
+Firebase Storage
+Vercel
 
-### `npm start`
+技術構成
+このアプリでは Firebase をバックエンドとして利用しています。
+認証
+Firebase Authentication を使用し、ユーザーは匿名ログインで利用できます。
+データ保存
+投稿された手紙のデータは Firestore に保存されています。
+画像保存
+投稿された画像は Firebase Storage に保存されます。
+いいね機能
+Firestore 上でユーザーIDを管理し、
+ユーザーごとに1回のみいいねできる仕組みを実装しています。
+デプロイ
+Vercel を使用してアプリを公開しています。
+アプリ構成
+主なコンポーネント
+YLTitle
+タイトル画面
+YLIndex
+手紙タイムライン
+YLTo
+宛先選択
+YLBinsen
+便箋選択
+YLWrite
+手紙作成
+YLSee
+手紙詳細
+YLSettings
+設定画面
+アプリのフロー
+Title
+ ↓
+Index（タイムライン）
+ ↓
+To（宛先選択）
+ ↓
+Binsen（便箋選択）
+ ↓
+Write（手紙を書く）
+ ↓
+投稿 → Timeline
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+工夫した点
+1 SNSとは異なる体験設計
+返信機能やフォロー機能をあえて実装せず、
+手紙を書く体験に集中できる設計にしました。
+2 Firebase を利用したシンプルなバックエンド
+認証・データ保存・画像保存を Firebase に統一し、
+シンプルな構成でフルスタックアプリを実装しました。
+3 いいね機能の制御
+Firestore 上でユーザーIDを管理し、
+ユーザーごとに1回だけいいねできる仕組みを実装しました。
+4 React コンポーネント設計
+画面ごとにコンポーネントを分割することで
+アプリ構造を整理しました。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+今後の改善
+モバイルUIの最適化
+タイムラインのパフォーマンス改善
+UIデザインの改善
