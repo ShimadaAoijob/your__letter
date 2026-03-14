@@ -138,7 +138,7 @@ function YLApp() {
     }
   };
 
-  // BGM on/off & volume
+
   useEffect(() => {
     const a = bgmRef.current;
     if (!a) return;
@@ -192,7 +192,7 @@ function YLApp() {
   return (
     <div>
 
-      <audio ref={bgmRef} src="/USE.mp3" loop preload="auto" />
+      <audio ref={bgmRef} src="/music.mp3" loop preload="auto" />
 
       <audio ref={seFallbackRef} src="/SE_1.mp3" preload="auto" />
 
