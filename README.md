@@ -71,28 +71,10 @@ YLSee
 手紙詳細
 YLSettings
 設定画面
+
 アプリのフロー
-Title
 
- ↓
- 
-Index（タイムライン）
-
- ↓
- 
-To（宛先選択）
-
- ↓
- 
-Binsen（便箋選択）
-
- ↓
- 
-Write（手紙を書く）
-
- ↓
- 
-投稿 → Timeline
+Title => Index（タイムライン) => To（宛先選択） => Binsen（便箋選択) => Write（手紙を書く） => 投稿 => Timeline
 
 工夫した点
 1 SNSとは異なる体験設計
@@ -112,3 +94,4 @@ Firestore 上でユーザーIDを管理し、
 モバイルUIの最適化
 タイムラインのパフォーマンス改善
 UIデザインの改善
+通報機能の実施
