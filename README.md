@@ -73,15 +73,25 @@ YLSettings
 設定画面
 アプリのフロー
 Title
+
  ↓
+ 
 Index（タイムライン）
+
  ↓
+ 
 To（宛先選択）
+
  ↓
+ 
 Binsen（便箋選択）
+
  ↓
+ 
 Write（手紙を書く）
+
  ↓
+ 
 投稿 → Timeline
 
 工夫した点
